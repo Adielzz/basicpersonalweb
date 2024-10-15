@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Pribadi - Ahmad Fahmi Abdillah</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow: hidden; /* Mencegah scroll jika video terlalu besar */
+      }
+      /* Video Background */
+      .video-background {
+        position: fixed; /* Agar video tetap di latar belakang */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Agar video memenuhi area */
+        z-index: -1; /* Menempatkan video di belakang konten lainnya */
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative; /* Agar konten bisa ditampilkan di atas video */
+        z-index: 1; /* Agar konten berada di atas video */
+      }
+      /* Navbar at the top */
+      .navbar {
+        background-color: rgba(51, 51, 51, 0.7); /* Translucent untuk kontras */
+        color: white;
+        padding: 10px;
+        text-align: center;
+        position: relative; /* Memastikan navbar tetap di atas */
+        z-index: 2; /* Agar navbar tetap di atas konten lainnya */
+      }
+      .navbar ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+      }
+      .navbar ul li {
+        margin: 0 15px;
+      }
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 8px 16px;
+        transition: background-color 0.3s;
+      }
+      .navbar ul li a:hover {
+        background-color: #007bff;
+        border-radius: 5px;
+      }
+      /* Main content */
+      .content {
+        margin-top: 20px;
+      }
+      .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.9
+        ); /* Latar belakang putih transparan */
+        padding: 20px; /* Padding untuk teks */
+        border-radius: 10px; /* Sudut membulat */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Bayangan untuk tampilan */
+        z-index: 1; /* Memastikan profil berada di atas video */
+      }
+      .profile img {
+        border-radius: 50%;
+        margin-right: 20px;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+      .profile h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Bayangan teks */
+      }
+      .profile p {
+        font-size: 18px;
+        color: #555;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+      }
+      .section {
+        margin-top: 40px;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Latar belakang putih transparan */
+        padding: 20px; /* Padding untuk teks */
+        border-radius: 10px; /* Sudut membulat */
+      }
+      h2 {
+        margin-bottom: 20px;
+        color: #007bff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+      }
+      .projects ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+      .projects ul li {
+        margin-bottom: 10px;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: rgba(51, 51, 51, 0.7); /* Translucent untuk kontras */
+        color: white;
+        margin-top: 20px;
+      }
+      @media (max-width: 768px) {
+        .profile {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .profile img {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Video Background -->
+    <video class="video-background" autoplay muted loop>
+      <source src="bg.mp4" type="video/mp4" />
+      <!-- Ganti dengan nama file video Anda -->
+      Browser Anda tidak mendukung video.
+    </video>
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang Saya</a></li>
+        <li><a href="#proyek">Proyek</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+
+    <!-- Container utama -->
+    <div class="container">
+      <!-- Profil dengan foto di kiri dan deskripsi di kanan -->
+      <div class="profile">
+        <img src="IMG_9177.JPG" alt="Foto Ahmad Fahmi Abdillah" />
+        <div>
+          <h1>Ahmad Fahmi Abdillah</h1>
+          <p>Mahasiswa Teknik Informatika | Pengembang Web | Peneliti AI</p>
+        </div>
+      </div>
+
+      <!-- Beranda -->
+      <section id="beranda" class="section">
+        <h2>Selamat Datang</h2>
+        <p>
+          Selamat datang di website pribadi saya! Di sini Anda dapat menemukan
+          informasi tentang saya, proyek yang saya kerjakan, dan cara
+          menghubungi saya untuk kolaborasi atau diskusi lebih lanjut.
+        </p>
+      </section>
+
+      <!-- Tentang Saya -->
+      <section id="tentang" class="section about">
+        <h2>Tentang Saya</h2>
+        <p>
+          Saya adalah mahasiswa Teknik Informatika dengan minat dalam
+          pengembangan sistem berbasis kecerdasan buatan, khususnya dalam
+          pemrosesan bahasa alami dan sistem rekomendasi.
+        </p>
+      </section>
+
+      <!-- Proyek -->
+      <section id="proyek" class="section projects">
+        <h2>Proyek Saya</h2>
+        <ul>
+          <li>
+            <strong
+              >Sistem Rekomendasi Buku dengan Algoritma Kecerdasan
+              Buatan</strong
+            >
+            <p>
+              Membuat sebuah sistem yang dapat memberikan rekomendasi buku
+              kepada pengguna berdasarkan preferensi mereka menggunakan model
+              kecerdasan buatan.
+            </p>
+          </li>
+          <li>
+            <strong
+              >Analisis Data Penjualan Online dengan Metode Clustering</strong
+            >
+            <p>
+              Mengembangkan model analisis data untuk mengelompokkan pelanggan
+              toko online guna meningkatkan strategi pemasaran.
+            </p>
+          </li>
+          <li>
+            <strong
+              >Desain Poster Digital untuk Acara Fiktif "Festival
+              Teknologi"</strong
+            >
+            <p>
+              Merancang poster digital untuk acara "Festival Teknologi", fokus
+              pada elemen teknologi futuristik dan minimalis.
+            </p>
+          </li>
+          <li>
+            <strong
+              >Pengembangan Aplikasi Manajemen Waktu dengan Antarmuka
+              Modern</strong
+            >
+            <p>
+              Mengembangkan dan mendesain aplikasi manajemen waktu yang memiliki
+              fitur pelacakan aktivitas dan visualisasi data produktivitas.
+            </p>
+          </li>
+          <li>
+            <strong>Branding untuk Kampanye Sosial "Save The Earth"</strong>
+            <p>
+              Merancang identitas visual dan strategi desain untuk kampanye
+              lingkungan global fiktif bertajuk "Save The Earth".
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Kontak -->
+      <section id="kontak" class="section contact">
+        <h2>Kontak</h2>
+        <p>
+          Jika Anda tertarik untuk bekerja sama, silakan hubungi saya melalui:
+        </p>
+        <p>Email: <strong>fahmi.abdillah@domain.com</strong></p>
+        <p>WhatsApp: <strong>0881026923408</strong></p>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Ahmad Fahmi Abdillah - Semua Hak Dilindungi</p>
+    </footer>
+  </body>
+</html>
